@@ -9,11 +9,9 @@ class PodcastDownloader:
         self.download_path = Path(download_location)
         self.total_entries = 0
         self.create_directory()
-
     
     def create_directory(self) -> None:
         self.download_path.mkdir(parents=True, exist_ok=True)
-
 
     def download_file(self, url: str, filename: Path, count: int) -> None:
         try:
