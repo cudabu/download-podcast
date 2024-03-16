@@ -43,7 +43,7 @@ class PodcastDownloader:
                 filename = self.download_path / f"{safe_title}.mp3"
 
                 if not filename.exists():
-                    print(f"[{count}/{total_entries}] Downloading: {title}")
+                    print(f"[{count}/{self.total_entries}] Downloading: {title}")
                     self.download_file(mp3_url, filename, count)
                 else:
                     print(f"({count}/{self.total_entries}) File already exists: {filename}")
